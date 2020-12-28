@@ -30,13 +30,20 @@ ul li {
   list-style-type: none;
 }
 
+.navbar-nav .nav-item {
+  padding: 0.5rem 0;
+}
+
 .navbar-nav .nav-item .nav-link {
   color: var(--light-color);
 }
 
-.navbar-nav .nav-item .nav-link:hover {
+.navbar-nav .nav-item:hover .nav-link {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-item:hover {
   background-color: var(--light-color);
-  color           : var(--primary-color);
 }
 
 .card-info {
@@ -203,13 +210,13 @@ footer,
 }
 
 #section6 li a {
-  color : var(--grey);
-  cursor: pointer;
-  font-size:0.75rem;
+  color    : var(--grey);
+  cursor   : pointer;
+  font-size: 0.75rem;
 }
 
 #section6 li a:hover {
-  color: var(--primary-color);
+  color          : var(--primary-color);
   text-decoration: none;
 }
 
@@ -239,4 +246,141 @@ footer,
 
 .nav-item:hover .nav-subitem {
   display: block;
+}
+
+.navbar {
+  position        : sticky;
+  top             : 0;
+  z-index         : 9999;
+  background-color: #272727;
+  padding         : 0;
+}
+
+.page-title {
+  margin        : 0 0 30px;
+  text-align    : center;
+  text-transform: uppercase;
+  font-family   : "OpensansRegular", sans-serif;
+}
+
+.page-title h2 {
+  color         : #424143;
+  margin        : 0 20px;
+  padding       : 0 126px;
+  letter-spacing: 6px;
+  position      : relative;
+  display       : inline-block;
+  font-size     : 30px;
+  line-height   : 34px;
+  max-width     : 100%;
+}
+
+.page-title h2:after {
+  content   : "";
+  width     : 128px;
+  height    : 1px;
+  top       : 50%;
+  background: #424143;
+  position  : absolute;
+  right     : 0;
+  left      : auto;
+}
+
+.page-title h2:before {
+  background-color: #424143;
+  content         : "";
+  width           : 128px;
+  height          : 1px;
+  top             : 50%;
+  position        : absolute;
+  left            : 0;
+}
+
+.page-title h2 span {
+  max-width     : 100%;
+  display       : inline-block;
+  padding       : 0 16px 0 22px;
+  position      : relative;
+  z-index       : 1;
+  letter-spacing: 6px;
+}
+
+.page-title h2 span:after {
+  content   : "";
+  width     : 2px;
+  height    : 22px;
+  background: #424143;
+  position  : absolute;
+  right     : 0;
+  left      : auto;
+  top       : 50%;
+  margin-top: -11px;
+}
+
+.page-title h2 span:before {
+  background: #424143;
+  content   : "";
+  width     : 2px;
+  height    : 22px;
+  position  : absolute;
+  left      : 0;
+  top       : 50%;
+  margin-top: -11px;
+}
+
+.special-page-sections {
+  padding-top   : 50px;
+  padding-bottom: 50px;
+}
+
+.event-campaign-executive-profile-section .nav-tabs>li>a {
+  padding      : 9px 20px;
+  border-radius: 0;
+  font-size    : 20px;
+  border       : none;
+  margin       : 0;
+  background   : #fff;
+  color        : #424143;
+}
+
+.event-campaign-executive-profile-section .nav-tabs>li.active>a {
+  color           : #424143;
+  background-color: #f7f7f7;
+  border          : none;
+}
+
+.event-campaign-executive-profile-section .tab-content>.active {
+  visibility: visible;
+  opacity   : 1;
+  height    : auto;
+  padding   : 20px;
+  background: #f7f7f7;
+}
+
+.event-campaign-executive-profile-section .tab-pane {
+  display   : block !important;
+  opacity   : 0;
+  visibility: hidden;
+  height    : 0;
+  overflow  : hidden;
+  padding   : 0;
+}
+
+.view-content {
+  display  : flex;
+  flex-wrap: wrap;
+}
+
+.view-content .views-row {
+  width: 50%;
+  float: left;
+  padding: 0 8px;
+}
+.view-content .views-row .news-outer-wrapper{
+  background: #f6f6f6;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    float: left;
+    position: relative;
 }
